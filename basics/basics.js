@@ -114,21 +114,19 @@ var numbers = [2,3,4,5];
 //     firstName, lastName, address : { city, street }, friends : [f1, f2]
 // } = user;
 
-var users = [
-    { email : "john@test.com", age : 32},
-    { email : "jenny@test.com", age : 34},
-    { email : "james@test.com", age : 36},
-]
+// var users = [
+//     { email : "john@test.com", age : 32},
+//     { email : "jenny@test.com", age : 34},
+//     { email : "james@test.com", age : 36},
+// ]
 
-var [
-    {email : e1, age : a1},
-    {email : e2, age : a2},
-    {email : e3, age : a3},
-] = users;
+// var [
+//     {email : e1, age : a1},
+//     {email : e2, age : a2},
+//     {email : e3, age : a3},
+// ] = users;
 
-console.log(e1, a1, e2, a2, e3, a3)
-
-
+// console.log(e1, a1, e2, a2, e3, a3)
 
 
 
@@ -147,13 +145,243 @@ console.log(e1, a1, e2, a2, e3, a3)
 
 
 
-//  - Rest / Spread Operators
-//  - Template literals
-//  - Block scoping
+
+
+//  - Rest / Spread Operators (...)
+//  - Rest -> creates the collection from individual items; last parameter in function argument list
+//  - Spread -> splits the collection into individual items; works with collection
+
+
+// var coll = [3,4,5];
+
+// var newCollOne = [1,2, ...coll, 6,7,8];    // 3
+// var newCollTwo = [1,2, coll, 6,7,8];
+
+// console.log(newCollOne);        // [3,4,5]
+// console.log(newCollTwo);        // [3,4,5]
+
+
+// var userOne = {
+//     name : "John",
+//     isAdmin : true,
+//     dob : new Date("Dec 21, 1993")
+// }
+
+// var userTwo = {
+//     ...userOne,         // {name , isAdmin, dob}
+//     name : "Jenny",
+//     isAdmin : false
+// }
+
+// console.log(userTwo);           // {name : "Jenny", isAdmin : true, dob : ""}
+
+
+
+
+// var userOne = { name : "Foo" }          // xxx0o9xix8 -> {name : "Foo"}
+
+// var userTwo = userOne;                  // xxx0o9xix8 -> {name : "Foo"}
+
+// userTwo.name = "Bar";
+
+// console.log(userOne);       // "Bar"
+
+
+
+// var books = ["book1", "book2", "book3"]
+
+// // Immutable
+// var myBooks = [...books];
+
+// myBooks.push("book4");
+
+// console.log(myBooks);           // ?
+
+// console.log(books.length);          // ?
+
+
+// var myBooks = books;
+
+// myBooks.push("book4");
+
+// console.log(books.length);          // 4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function display(email, age, ...args){
+//     console.log(args[0]);           // true
+// }
+
+// display("email@test.com")
+// display("email@test.com", 32)
+// display("email@test.com", 32, true)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//  - Template literals :  " " || ' ' || ` ` (back tick) ${}
+// - Embed the variables within string without ( + ) using ${}
+// - Mutli-line string without the need of (\n)
+
+// var username = "John Doe";
+// var age = 32;
+
+// var str = `Hello from ${username},
+// I'm ${age} years old.
+// `
+
+// console.log(str);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//  - Block scoping : restricting the scope of variable to the nearest block (if, for else etc)
+// - let : other types
+// - const : to create constants
+
+
+// Creational -> LOAD = FLASH = undefined;
+// Executional -> FLASH = undefined
+
+// function demo(arr){
+//     if(arr.length > 2){
+//         let LOAD = "LOADING"
+//         console.log(FLASH);             // "undefined" | ReferenceError : not defined
+//     }else{
+//         let FLASH = "FLASHING"
+//     }
+// }
+
+// demo([2,3,4,5])
+
+
+// const USERNAME = "John Doe";
+
+// USERNAME = "Jenny Doe";
+
+
+// const user = Object.freeze({                      // xxx0xx9xi8x ---> {name : "John Doe"}
+//     name : "John Doe"
+// })
+
+// user = {
+//     name : "James Doe"
+// }
+
+// user.name = "Jenny Doe";            //  xxx0xx9xi8x ---> {name : "Jenny Doe"}
+
+// console.log(user);          //  { name : "Jenny Doe"}
+
+
+
+
+
+
+//  - Map/Set : 
+// Map - Store the data as key-value pair
+// Set - Store unique value
+
+// let user = {
+//     name : "John Doe",
+//     age : 32,
+//     {name : "john"} : true
+// }
+
+// let user = {
+//     name : "Jenny Doe"
+// }
+// let map = new Map()
+
+// map.set("name", "Jenny Doe")
+// map.set(user, true)
+// map.set(true, 1)
+// map.set(new Date("Dec 21, 1983"), "Date of Birth")
+
+// console.log(map.get(user))
+
+// for(let keys of map.values()){
+//     console.log(keys);
+// }
+
+
+// for(let key of user){
+//     console.log(key)
+// }
+
+
+
+// let set = new Set();
+
+// set.add("John")
+// set.add("Jenny")
+// set.add("John")
+// set.add("James")
+
+// console.log(set.size);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //  - Promise API
 //  - Classes
 //  - Module System
-//  - Map/Set
 
 
 

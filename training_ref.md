@@ -50,3 +50,14 @@ N - Node : Platform to execute JavaScropt code on Server
  - findIndex
  - some : boolean value; if one of the element meet the criteria
  - every : boolean value; if all the element meet the criteria
+
+
+ # JavaScript DataTypes
+ - Primitive : Number, String, Boolean
+ - Reference : Date, Object, Array, Function
+
+ # JavaScript Engine
+ - Creational Phase : all avriable takes place into memory and JS engine assigns them value "undefined"
+ - Executional Phase : refers all variable present in memory;
+
+ # const != immutable
