@@ -79,3 +79,12 @@ N - Node : Platform to execute JavaScropt code on Server
  - classes
  - tuple
  - Custom Type -> type keyword | interface
+
+ # to install typescript
+ > npm i typescript -g
+ > tsc <filename>
+ > tsc --version
+
+ # Compilation Context - to generate tsconfig.json
+ > npx tsc --init
+ > tsc --watch
