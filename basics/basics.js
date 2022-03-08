@@ -151,6 +151,51 @@ var numbers = [2,3,4,5];
 //  - Rest -> creates the collection from individual items; last parameter in function argument list
 //  - Spread -> splits the collection into individual items; works with collection
 
+// Collection -> Array [] || Object {}
+
+// let utils = {
+//     add : (n1, n2) => n1 + n2,
+//     mul : (n1, n2) => n1 * n2,
+//     square : val => val & val
+// }
+
+// let mathUtil = {
+//     ...utils,               // {add , mul , square}
+//     div : (n1, n2) => n1 / n2
+// }
+
+// console.log( "Sum : ", mathUtil.add(2,4))
+
+// let fruits = ["apple", "banana"]
+
+// let extendedFruits = [...fruits, "kiwi", "guava"]
+
+// console.log(extendedFruits);
+
+
+
+// function demo(...emails){
+//     console.log(emails);
+// }
+
+// demo("foo@test.com", "bar@test.com", "bam@test.com")
+
+
+
+// function mathUtil(sum, mul, square){
+//     console.log("Sum  : ", sum(2,4));
+// }
+
+
+// mathUtil(...utils)
+
+
+
+
+
+
+
+
 
 // var coll = [3,4,5];
 
@@ -205,26 +250,6 @@ var numbers = [2,3,4,5];
 // myBooks.push("book4");
 
 // console.log(books.length);          // 4
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // function display(email, age, ...args){
@@ -379,7 +404,81 @@ var numbers = [2,3,4,5];
 
 
 
-//  - Promise API
+//  - Promise API : way to consume async code
+//  - State : Pending, Resolved, Rejected
+//  - Result : "undefined", Response, Error
+
+// - Producer Code : producer the promise data
+// - Consumer Code : consume thee data emitted by promise API 
+    // - .then().catch()
+    // - Async...await
+
+// console.log("Start")
+// setTimeout(() => {
+//     // Make Remote Server call and return some data
+//     console.log("Timer works")
+// }, 3000);
+// console.log("End")
+
+
+// Start -> End -> Timer Works
+
+// Start -> Timer Work -> End
+
+
+// Promise Producer Code
+function demoPromise(ms){
+    const promise = new Promise((resolve, reject)=>{
+        if(ms < 3000){
+            setTimeout(() => {
+                resolve({message : "SUCCESS"})
+            }, ms)
+        }else{
+            reject(new Error("Waiting too long..."))
+        }
+    });
+    return promise;
+}
+
+// Consumer Code
+
+const consumePromise = async () => {
+    try{
+        let result = await demoPromise(3500)
+        console.log("RESULT -> ", result);
+    }catch(err){
+        console.log("ERROR -> ", err)
+    }
+}
+
+// function consumePromise(){
+
+//     demoPromise(3500)
+//         .then(response => console.log("RESPONSE -> ", response))
+//         .catch(err => console.log("ERROR -> ", err))
+
+//     // console.log("Start")
+//     // demoPromise().then(response => {
+//     //     console.log("Promise Data - ", response);
+//     //     console.log("End")
+//     // }).catch(error => console.log("ERROR ---> ", error))
+// }
+
+
+consumePromise();
+
+
+
+
+
+
+
+
+
+
+
+
+
 //  - Classes
 //  - Module System
 
