@@ -61,3 +61,21 @@ N - Node : Platform to execute JavaScropt code on Server
  - Executional Phase : refers all variable present in memory;
 
  # const != immutable
+
+
+ # Why TypeScript ?
+ - Type Definition
+ - Extended version of JS
+ - Object oriented
+ - ES6 / ES2015+ features
+ - Angular itself programmed in TS
+
+ # Type System in Typescript
+ - any
+ - unknown
+ - enum
+ - null
+ - void
+ - classes
+ - tuple
+ - Custom Type -> type keyword | interface

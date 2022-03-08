@@ -427,29 +427,29 @@ var numbers = [2,3,4,5];
 
 
 // Promise Producer Code
-function demoPromise(ms){
-    const promise = new Promise((resolve, reject)=>{
-        if(ms < 3000){
-            setTimeout(() => {
-                resolve({message : "SUCCESS"})
-            }, ms)
-        }else{
-            reject(new Error("Waiting too long..."))
-        }
-    });
-    return promise;
-}
+// function demoPromise(ms){
+//     const promise = new Promise((resolve, reject)=>{
+//         if(ms < 3000){
+//             setTimeout(() => {
+//                 resolve({message : "SUCCESS"})
+//             }, ms)
+//         }else{
+//             reject(new Error("Waiting too long..."))
+//         }
+//     });
+//     return promise;
+// }
 
 // Consumer Code
 
-const consumePromise = async () => {
-    try{
-        let result = await demoPromise(3500)
-        console.log("RESULT -> ", result);
-    }catch(err){
-        console.log("ERROR -> ", err)
-    }
-}
+// const consumePromise = async () => {
+//     try{
+//         let result = await demoPromise(3500)
+//         console.log("RESULT -> ", result);
+//     }catch(err){
+//         console.log("ERROR -> ", err)
+//     }
+// }
 
 // function consumePromise(){
 
@@ -465,7 +465,7 @@ const consumePromise = async () => {
 // }
 
 
-consumePromise();
+// consumePromise();
 
 
 
@@ -480,6 +480,57 @@ consumePromise();
 
 
 //  - Classes
+
+// class Student {
+//     constructor(firstName, lastName){
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+//     }
+//     sayHello () {
+//         return `Hello from ${this.firstName} ${this.lastName};`
+//     }
+// }
+
+// let foo = new Student("Foo", "Bar");
+// console.log(foo.sayHello())
+
+
+// let user = {
+//     name : "John Doe",
+//     sayHi(){
+//         return `Hi from ${this.name}`
+//     }
+// }
+
+// user.isAdmin = true;
+
+// console.log(user.sayHi())
+
+
+
+
+
+let age = "Twenty-Two";
+console.log(typeof(age));
+
+age = 32;
+console.log(typeof(age));
+
+age = true;
+age = {}
+age = function(){}
+
+
+
+
+
+
+
+
+
+
+
+
 //  - Module System
 
 
