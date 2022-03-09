@@ -3,4 +3,5 @@ export interface IExpense {
   title : string;
   amount : number;
   createdAt : Date;
+  imagePath : string;
 }

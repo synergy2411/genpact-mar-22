@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ExpensesComponent } from './components/expenses/expenses.component';
@@ -10,7 +11,8 @@ import { ExpensesComponent } from './components/expenses/expenses.component';
     ExpensesComponent
   ],
   imports: [          // Import the Angular Module - Built-in / Custom
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],      // to register the Services
   bootstrap: [AppComponent]

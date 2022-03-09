@@ -149,5 +149,7 @@ N - Node : Platform to execute JavaScropt code on Server
 - cd my-app
 - ng serve || npm run start
 
+# to add bootstrap
+- npm i bootstrap@4
 
 
