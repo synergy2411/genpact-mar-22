@@ -72,40 +72,56 @@
 //     name : "John Doe"
 // }
 // Class 
-class Animal {
-    // private legs : number;
-    // private species : string;
-    // constructor(legs : number, species : string){
-    //     this.legs = legs;
-    //     this.species = species;
-    // }
-    // Constructor injection
-    constructor(legs, species) {
-        this.legs = legs;
-        this.species = species;
-    }
-    walk() {
-        return `${this.species} can walk with ${this.legs} legs!!`;
-    }
-}
-let bunny = new Animal(4, "Rabbit");
-console.log(bunny.walk());
-class Cat extends Animal {
-    // constructor(legs : number, species : string, private name : string){
-    //     super(legs, species);
-    // }
-    constructor(cat) {
-        super(cat.legs, cat.species);
-        this.cat = cat;
-    }
-    sayName() {
-        return `${this.cat.name} can walk with ${super.walk()}`;
-    }
-}
-let catObj = {
-    legs: 4,
-    name: "Kitty",
-    species: "Tiger"
-};
-let kitty = new Cat(catObj);
-console.log(kitty.walk());
+// class Animal{
+//     // private legs : number;
+//     // private species : string;
+//     // constructor(legs : number, species : string){
+//     //     this.legs = legs;
+//     //     this.species = species;
+//     // }
+//     // Constructor injection
+//     constructor(private legs : number, private species : string){}
+//     walk() : string{
+//         return `${this.species} can walk with ${this.legs} legs!!`
+//     }
+// }
+// let bunny = new Animal(4, "Rabbit");
+// console.log(bunny.walk())
+// interface CatType  {
+//     legs : number;
+//     species : string;
+//     name : string;
+// }
+// class Cat extends Animal{
+//     // constructor(legs : number, species : string, private name : string){
+//     //     super(legs, species);
+//     // }
+//     constructor(private cat : CatType){
+//         super(cat.legs, cat.species);
+//     }
+//     sayName () : string {
+//         return `${this.cat.name} can walk with ${super.walk()}`;
+//     }
+// }
+// let catObj : CatType = {
+//     legs : 4, 
+//     name : "Kitty",
+//     species : "Tiger"
+// }
+// let kitty = new Cat(catObj);
+// // console.log(kitty.walk())
+// console.log(kitty.sayName())
+// interface DoFormat{
+//     formatter : () => void
+// }
+// class Format implements DoFormat{
+//     formatter(){
+//         console.log("Doing formatting...")
+//     }
+// }
+// class Color implements DoFormat{
+//     formatter(){
+//         console.log("Color Formatted")
+//     }
+// }
+// Module System
