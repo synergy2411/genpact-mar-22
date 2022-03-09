@@ -78,7 +78,9 @@ N - Node : Platform to execute JavaScropt code on Server
  - void
  - classes
  - tuple
- - Custom Type -> type keyword | interface
+ - Custom Type -> 'type' keyword | 'interface' - Structural type
+
+
 
  # to install typescript
  > npm i typescript -g
@@ -88,3 +90,4 @@ N - Node : Platform to execute JavaScropt code on Server
  # Compilation Context - to generate tsconfig.json
  > npx tsc --init
  > tsc --watch
+

@@ -119,3 +119,57 @@
 // }
 
 
+
+
+
+
+
+// Class 
+
+class Animal{
+    // private legs : number;
+    // private species : string;
+    // constructor(legs : number, species : string){
+    //     this.legs = legs;
+    //     this.species = species;
+    // }
+    
+    // Constructor injection
+    constructor(private legs : number, private species : string){}
+
+    walk() : string{
+        return `${this.species} can walk with ${this.legs} legs!!`
+    }
+}
+
+let bunny = new Animal(4, "Rabbit");
+console.log(bunny.walk())
+
+interface CatType  {
+    legs : number;
+    species : string;
+    name : string;
+}
+
+class Cat extends Animal{
+    // constructor(legs : number, species : string, private name : string){
+    //     super(legs, species);
+    // }
+
+    constructor(private cat : CatType){
+        super(cat.legs, cat.species);
+    }
+    sayName () : string {
+        
+        return `${this.cat.name} can walk with ${super.walk()}`;
+    }
+}
+
+let catObj : CatType = {
+    legs : 4, 
+    name : "Kitty",
+    species : "Tiger"
+}
+
+let kitty = new Cat(catObj);
+console.log(kitty.walk())
