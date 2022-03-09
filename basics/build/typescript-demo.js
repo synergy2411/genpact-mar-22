@@ -124,4 +124,4 @@
 //         console.log("Color Formatted")
 //     }
 // }
-// Module System
+let x = 100;

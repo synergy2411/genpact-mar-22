@@ -91,3 +91,63 @@ N - Node : Platform to execute JavaScropt code on Server
  > npx tsc --init
  > tsc --watch
 
+# Decorators / Annotations -> Used for Meta-programming
+- Simple Function with pre-defined logic
+- Pre-fixed with '@'
+- Types of Decorators
+     : Class Level
+     : Property Level
+     : Method Level
+     : Parameter Level
+
+
+
+# Angular Building blocks-
+- Component : ES6 Class with @Component({})
+- Directive : ES6 Class with @Directive({})
+- Pipe : ES6 Class with @Pipe({})
+- Service : ES6 Class with @Injectable({})
+- Module : ES6 Class with @NgModule({})
+
+
+
+
+# What is Angular ?
+- Open Source
+- JavaScript framework
+- Front-end App
+- Single Page App
+- Web Apps
+- Written in Typescript
+- Works on MVC pattern
+
+
+# JavaScript Libraries / Framework
+- React : render UI quickly, SPA => react-router-dom, State => Redux, Form Validation => Formik
+- JQuery : DOM Maipulation, AJAX Calls
+- KnockoutJS : Two-way data-binding, MVVM Pattern
+- Bootstrap : Make responsive websites
+- Vue : Template oriented UI
+- BackboneJS : MVC Pattern at client side
+- Stencil : Creating custom components
+- Polymer : Creating custom web components
+- AngularJS (v1) Library (2011): MVC, Two-way data-binding, SPA = angular-router
+- *Ember (2011): Templates, Two-way data-binding, MVC Pattern, State Management, SPA, Remote Server Call etc
+- *Angular (Oct 2014) : Templates, Two-way data-binding, MVC Pattern, State Management, SPA, Remote Server Call, DOM Manipulation, AoT Compiler, Ivy Renderer, Google Sponsured Team, Huge Community Support, Create own tags, Component based architecture, Shadow DOM etc
+
+- NodeJS : Platform
+- ExpressJS / Koa / Hapi / Sails / Kraken : Server Side Framework
+
+
+# to install Angular CLI
+- npm i @angular/cli@12 -g
+- ng --version
+
+# to Create Angular Project
+- ng new <project-name>
+    : ng new my-app
+- cd my-app
+- ng serve || npm run start
+
+
+
