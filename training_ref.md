@@ -153,3 +153,19 @@ N - Node : Platform to execute JavaScropt code on Server
 - npm i bootstrap@4
 
 
+# Nested Component Communication
+# Life cycle Methods
+# Directives : 
+    - Structural
+    - Attribute
+# Pipes / Forms
+
+
+
+# CLI Commands
+- ng generate component /path/comp-name || ng g c comp-name
+- ng g c components/expenses/expense
+- ng generate directive /path/directive-name || ng g d directive-name
+- ng g p pipe-name
+- ng g m module-name
+- ng g s service-name

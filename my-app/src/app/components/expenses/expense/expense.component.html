@@ -1,0 +1,12 @@
+<div class="card">
+  <div class="card-img-top text-center">
+    <img [src]="expense.imagePath" class="img-fluid rounded-circle" />
+  </div>
+  <div class="card-body">
+    <h4 class="text-center card-title">{{ expense.title.toUpperCase() }}</h4>
+    <p class="lead">Amount : $<span [innerText]="expense.amount"></span></p>
+    <p>Date : <span [innerText]="expense.createdAt"></span></p>
+    <button class="btn btn-danger btn-block"
+      (click)="onDelete()">DELETE</button>
+  </div>
+</div>
