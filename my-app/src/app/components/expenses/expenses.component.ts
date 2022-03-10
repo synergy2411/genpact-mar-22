@@ -22,7 +22,8 @@ export class ExpensesComponent {
   }];
 
   deleteExpense(id : string){
-    console.log("Received : ", id);
+    const position = this.expenses.findIndex((exp) => exp.id === id )
+    this.expenses.splice(position, 1);
   }
 
   changeAmount(target: EventTarget) {
