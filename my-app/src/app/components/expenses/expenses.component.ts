@@ -1,36 +1,33 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { IExpense } from 'src/app/model/expense.model';
+import { EXPENSE_DATA } from 'src/app/data/mocks';
 
 @Component({
   selector: 'app-expenses',
   templateUrl: './expenses.component.html',
   styleUrls: ['./expenses.component.css'],
 })
-export class ExpensesComponent {
-  expenses : IExpense[] = [{
-    id: 'e001',
-    title: 'grocery',
-    amount: 19.99,
-    createdAt: new Date('Dec 21, 2019'),
-    imagePath: 'https://picsum.photos/200',
-  },{
-    id: 'e002',
-    title: 'shopping',
-    amount: 39.99,
-    createdAt: new Date('Jan 1, 2021'),
-    imagePath: 'https://picsum.photos/200',
-  }];
+export class ExpensesComponent implements OnInit, OnDestroy{
+  expenses! : IExpense[];
+
+  ngOnInit(): void {
+    this.expenses = EXPENSE_DATA;
+  }
 
   deleteExpense(id : string){
     const position = this.expenses.findIndex((exp) => exp.id === id )
     this.expenses.splice(position, 1);
   }
 
-  changeAmount(target: EventTarget) {
-    this.expenses[0].amount = Number((target as HTMLInputElement).value);
+  ngOnDestroy(): void {
+    this.expenses = [];
   }
 
-  showInfo(id: string) {
-    alert('Showin info about ' + id);
-  }
+  // changeAmount(target: EventTarget) {
+  //   this.expenses[0].amount = Number((target as HTMLInputElement).value);
+  // }
+
+  // showInfo(id: string) {
+  //   alert('Showin info about ' + id);
+  // }
 }

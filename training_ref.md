@@ -169,3 +169,7 @@ N - Node : Platform to execute JavaScropt code on Server
 - ng g p pipe-name
 - ng g m module-name
 - ng g s service-name
+
+# Component Types
+- Smart | Container | Parent --> Expenses Component --> Component level business logic
+- Dump | Presentational | Child --> Expense Component --> Creating the UI
