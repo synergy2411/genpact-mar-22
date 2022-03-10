@@ -1,5 +1,8 @@
-<h4>Promise Data : {{ promise | async }}</h4>
+<h4>Promise Data : {{ promise | async  }}</h4>
 
 <br>
 
-<h4>Contact Number : {{ contactNumber | countryCode : 'AUS'}}</h4>
+<h4>Contact Number : {{ contactNumber  | countryCode : 'AUS'}}</h4>
+
+
+<h4>Message : {{ message | uppercase | lowercase | titlecase }} </h4>
