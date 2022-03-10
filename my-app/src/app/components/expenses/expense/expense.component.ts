@@ -1,4 +1,4 @@
-import { Component, Input, EventEmitter, Output } from '@angular/core';
+import { Component, Input, EventEmitter, Output, AfterViewInit, OnInit } from '@angular/core';
 import { IExpense } from 'src/app/model/expense.model';
 
 @Component({
@@ -6,9 +6,10 @@ import { IExpense } from 'src/app/model/expense.model';
   templateUrl: './expense.component.html',
   styleUrls: ['./expense.component.css']
 })
-export class ExpenseComponent {
+export class ExpenseComponent implements OnInit {
 
   @Input() expense! : IExpense;
+  @Input() isEven! : boolean;
 
   @Output() deleteEvent = new EventEmitter<string>();
 
@@ -17,6 +18,11 @@ export class ExpenseComponent {
   dynamicStyle = {
     'background-color' : 'grey',
     'font-weight' : 'bold'
+  }
+
+  ngOnInit(): void {
+    this.dynamicClasses['feature'] = !this.isEven
+    this.dynamicClasses['my-border'] = this.isEven
   }
 
   onDelete(){
