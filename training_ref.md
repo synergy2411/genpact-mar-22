@@ -158,7 +158,7 @@ N - Node : Platform to execute JavaScropt code on Server
 # Directives : 
     - Structural
     - Attribute
-# Pipes / Forms
+# Pipes 
 
 
 
@@ -190,3 +190,29 @@ html
             ul
                 li
                     a
+
+
+# Pipe Types
+- Pure : default; will run on pure changes
+- Impure : will run on pure as well as impure changes
+
+let user = {
+    name : "Foo
+}
+
+// Impure Change
+user.name = "Bar"           // option 1 - not changing the reference
+
+// Pure Change
+user = {                    // option 2 - changing the reference
+    name : "Bam"
+}
+
+
+let fruits = ["apple","banana"]
+
+// Impure Change
+fruits.push("kiwi")                         // option 1
+
+// Pure Change
+fruits = ["apple", "banana", "kiwi"]        // option 2
