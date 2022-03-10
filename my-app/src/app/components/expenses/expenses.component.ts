@@ -9,6 +9,7 @@ import { EXPENSE_DATA } from 'src/app/data/mocks';
 })
 export class ExpensesComponent implements OnInit, OnDestroy{
   expenses! : IExpense[];
+  filteredYear  : string = '';
 
   ngOnInit(): void {
     this.expenses = EXPENSE_DATA;
