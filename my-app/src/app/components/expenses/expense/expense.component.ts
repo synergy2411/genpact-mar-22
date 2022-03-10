@@ -12,6 +12,13 @@ export class ExpenseComponent {
 
   @Output() deleteEvent = new EventEmitter<string>();
 
+  dynamicClasses = {'my-border' : false, 'feature' : true}
+
+  dynamicStyle = {
+    'background-color' : 'grey',
+    'font-weight' : 'bold'
+  }
+
   onDelete(){
     this.deleteEvent.emit(this.expense.id)
   }

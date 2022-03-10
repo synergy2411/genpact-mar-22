@@ -173,3 +173,20 @@ N - Node : Platform to execute JavaScropt code on Server
 # Component Types
 - Smart | Container | Parent --> Expenses Component --> Component level business logic
 - Dump | Presentational | Child --> Expense Component --> Creating the UI
+
+
+# DOM - Document Object Model : hierarchical structure of HTML elements
+
+html
+    head
+        title
+        meta
+        script
+        link
+    body
+        div
+        header  
+        nav
+            ul
+                li
+                    a

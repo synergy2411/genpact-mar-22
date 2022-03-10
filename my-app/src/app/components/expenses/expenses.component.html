@@ -1,16 +1,9 @@
 <div class="container">
   <h3 class="text-center">My Expenses</h3>
   <div class="row">
-    <div class="col-4" *ngIf="expenses[0]">
-      <app-expense [expense]="expenses[0]"
-        (deleteEvent)="deleteExpense($event)">
-        <header>Some header info</header>
-        <footer>some  footer info</footer>
-      </app-expense>
-    </div>
-    <div class="col-4" *ngIf="expenses[1]">
-      <app-expense [expense]="expenses[1]"
-        (deleteEvent)="deleteExpense($event)"></app-expense>
+    <div class="col-4" *ngFor="let expense of expenses; index as i; first as isFirst; even as isEven">
+      <app-expense [expense]="expense" (deleteEvent)="deleteExpense($event)"></app-expense>
+      <!-- Index: {{ i }} | First : {{isFirst}} | Even : {{ isEven }} -->
     </div>
   </div>
 </div>
