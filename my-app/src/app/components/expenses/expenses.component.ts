@@ -17,7 +17,8 @@ export class ExpensesComponent implements OnInit, OnDestroy{
 
   ngOnInit(): void {
     // this.expenses = EXPENSE_DATA;
-    this.expenses = this.dataService.getExpenseData()
+    this.dataService.getExpenseData()
+      .subscribe((response : IExpense[]) => this.expenses = response)
   }
 
   onCancelForm(){
@@ -25,6 +26,7 @@ export class ExpensesComponent implements OnInit, OnDestroy{
   }
 
   onAddNewExpense(newExpense : IExpense){
+    console.log(newExpense);
     this.expenses.push(newExpense);
     this.showform = false;
   }

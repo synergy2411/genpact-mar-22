@@ -12,7 +12,8 @@ export class FilterPipe implements PipeTransform {
     }
     let resultArray : IExpense []= [];
     for(let expense of expenses){
-      const year = expense.createdAt.getFullYear()
+      let expenseDate = new Date(expense.createdAt)
+      const year = expenseDate.getFullYear()
       if(year.toString() === filteredYear){
         resultArray.push(expense);
       }

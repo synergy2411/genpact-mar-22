@@ -14,6 +14,7 @@ import { FilterPipe } from './pipes/filter.pipe';
 import { AddNewComponent } from './components/expenses/add-new/add-new.component';
 import { LoginComponent } from './components/login/login.component';
 import { DataService } from './services/data.service';
+import { ObservableDemoComponent } from './components/observable-demo/observable-demo.component';
 
 @NgModule({
   declarations: [     // Components, Directives, Pipes
@@ -26,7 +27,8 @@ import { DataService } from './services/data.service';
     CountryCodePipe,
     FilterPipe,
     AddNewComponent,
-    LoginComponent
+    LoginComponent,
+    ObservableDemoComponent
   ],
   imports: [          // Import the Angular Module - Built-in / Custom
     BrowserModule,

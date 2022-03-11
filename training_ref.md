@@ -243,8 +243,12 @@ fruits = ["apple", "banana", "kiwi"]        // option 2
  > json-server db.json --watch
 
 
-
-
+# Observable : is a stream on which data flows at different time interval
+- are cold
+- emits series of event
+- can pipe various operators
+- error handling
+- are cancelable
 
 
 
