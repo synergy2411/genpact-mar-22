@@ -16,6 +16,11 @@ export class ExpensesComponent implements OnInit, OnDestroy{
     this.expenses = EXPENSE_DATA;
   }
 
+  onAddNewExpense(newExpense : IExpense){
+    this.expenses.push(newExpense);
+    this.showform = false;
+  }
+
   deleteExpense(id : string){
     const position = this.expenses.findIndex((exp) => exp.id === id )
     this.expenses.splice(position, 1);

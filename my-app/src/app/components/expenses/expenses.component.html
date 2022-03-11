@@ -17,7 +17,7 @@
   </div>
 
   <br>
-  <app-add-new *ngIf="showform"></app-add-new>
+  <app-add-new (addExpenseEvent)="onAddNewExpense($event)" *ngIf="showform"></app-add-new>
 
   <br>
   <div class="row">

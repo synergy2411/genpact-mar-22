@@ -1,0 +1,18 @@
+.ng-valid.ng-dirty[name="title"]{
+  border-left: 5px green solid;
+}
+.ng-invalid.ng-dirty[name="title"]{
+  border-left: 5px red solid;
+}
+.ng-valid.ng-dirty[name="amount"]{
+  border-left: 5px green solid;
+}
+.ng-invalid.ng-dirty[name="amount"]{
+  border-left: 5px red solid;
+}
+.ng-valid.ng-dirty[name="created-at"]{
+  border-left: 5px green solid;
+}
+.ng-invalid.ng-dirty[name="created-at"]{
+  border-left: 5px red solid;
+}
