@@ -2,7 +2,11 @@
   <h3 class="text-center">My Expenses</h3>
 
   <div class="row">
-    <div class="col-4 offset-8">
+    <div class="col-4 offset-4">
+      <button class="btn btn-secondary btn-block"
+        (click)="showform = !showform">Add Expense</button>
+    </div>
+    <div class="col-4">
       <select class="form-control" [(ngModel)] = "filteredYear">
         <option value="2019">2019</option>
         <option value="2020">2020</option>
@@ -12,6 +16,10 @@
     </div>
   </div>
 
+  <br>
+  <app-add-new *ngIf="showform"></app-add-new>
+
+  <br>
   <div class="row">
     <div class="col-4" *ngFor="let expense of expenses | filter : filteredYear ; index as i; first as isFirst; even as isEven">
       <app-expense [expense]="expense" [isEven]="isEven" (deleteEvent)="deleteExpense($event)"></app-expense>
