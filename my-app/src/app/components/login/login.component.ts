@@ -15,7 +15,8 @@ export class LoginComponent implements OnInit {
   pwd = new FormControl('',[
     Validators.required,
     Validators.minLength(6),
-    this.hasExclamation
+    this.hasExclamation,
+    this.hasSpecialSymbol('#')
   ]);
   loginForm! : FormGroup;
 
@@ -34,8 +35,13 @@ export class LoginComponent implements OnInit {
   }
 
   hasExclamation(control : AbstractControl){
-    const hasExcl = control.value.indexOf("!") >= 0;
-    return hasExcl ? null : {exclamationError : true}
+    return control.value.includes("!") ? null : {exclamationError : true}
+
   }
 
+  hasSpecialSymbol(symbol : string){
+    return (control : AbstractControl) => {
+      return control.value.includes(symbol) ? null : {specialSymbol : true}
+    }
+  }
 }

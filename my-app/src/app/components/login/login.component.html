@@ -55,6 +55,11 @@
                   - Password must have exclamation mark in it
                 </p>
               </div>
+              <div *ngIf="pwd.hasError('specialSymbol')">
+                <p class="alert alert-danger">
+                  - Password must have Special Symbol (#)
+                </p>
+              </div>
             </div>
           </div>
           <!-- buttons -->
