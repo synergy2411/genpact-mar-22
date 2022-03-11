@@ -233,6 +233,14 @@ fruits = ["apple", "banana", "kiwi"]        // option 2
 - ngTouched | ngUntouched
 
 
+# Remote Server Call - HttpClientModule -> GET POST PUTCH DELETE
+
+# to install JSON SERVER
+- npm i json-server -g
+- create db.json file
+- paste expenses data in json file
+- run the json server
+ > json-server db.json --watch
 
 
 

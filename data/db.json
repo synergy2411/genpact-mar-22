@@ -1,0 +1,18 @@
+{
+  "expenses": [
+    {
+      "id": "e001",
+      "title": "grocery",
+      "amount": 19.99,
+      "createdAt": "2019-12-20T18:30:00.000Z",
+      "imagePath": "https://picsum.photos/200"
+    },
+    {
+      "id": "e002",
+      "title": "shopping",
+      "amount": 39.99,
+      "createdAt": "2020-12-31T18:30:00.000Z",
+      "imagePath": "https://picsum.photos/200"
+    }
+  ]
+}

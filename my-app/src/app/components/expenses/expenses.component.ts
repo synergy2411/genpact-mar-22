@@ -6,7 +6,7 @@ import { DataService } from 'src/app/services/data.service';
 @Component({
   selector: 'app-expenses',
   templateUrl: './expenses.component.html',
-  styleUrls: ['./expenses.component.css'],
+  styleUrls: ['./expenses.component.css']
 })
 export class ExpensesComponent implements OnInit, OnDestroy{
   expenses! : IExpense[];
