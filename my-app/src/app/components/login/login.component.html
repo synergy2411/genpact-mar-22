@@ -36,6 +36,26 @@
               class="form-control"
               [formControl]="pwd"
             />
+            <div *ngIf="pwd.invalid && pwd.dirty">
+              <p class="alert alert-danger">
+                * Some problem with Password
+              </p>
+              <div *ngIf="pwd.hasError('required')">
+                <p class="alert alert-danger">
+                  - Password is madatory field
+                </p>
+              </div>
+              <div *ngIf="pwd.hasError('minlength')">
+                <p class="alert alert-danger">
+                - Password must have 6 characters at least
+              </p>
+              </div>
+              <div *ngIf="pwd.hasError('exclamationError')">
+                <p class="alert alert-danger">
+                  - Password must have exclamation mark in it
+                </p>
+              </div>
+            </div>
           </div>
           <!-- buttons -->
           <div class="form-group">

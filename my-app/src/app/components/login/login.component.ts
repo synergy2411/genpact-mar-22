@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, FormBuilder, Validators} from '@angular/forms';
+import { FormControl, FormGroup, FormBuilder, Validators, AbstractControl} from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +14,8 @@ export class LoginComponent implements OnInit {
   ]);
   pwd = new FormControl('',[
     Validators.required,
-    Validators.minLength(6)
+    Validators.minLength(6),
+    this.hasExclamation
   ]);
   loginForm! : FormGroup;
 
@@ -30,6 +31,11 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  hasExclamation(control : AbstractControl){
+    const hasExcl = control.value.indexOf("!") >= 0;
+    return hasExcl ? null : {exclamationError : true}
   }
 
 }
