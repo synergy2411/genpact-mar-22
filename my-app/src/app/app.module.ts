@@ -12,6 +12,7 @@ import { CountryCodePipe } from './pipes/country-code.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
 import { AddNewComponent } from './components/expenses/add-new/add-new.component';
 import { LoginComponent } from './components/login/login.component';
+import { DataService } from './services/data.service';
 
 @NgModule({
   declarations: [     // Components, Directives, Pipes

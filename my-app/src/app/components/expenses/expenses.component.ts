@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { IExpense } from 'src/app/model/expense.model';
-import { EXPENSE_DATA } from 'src/app/data/mocks';
+// import { EXPENSE_DATA } from 'src/app/data/mocks';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-expenses',
@@ -12,8 +13,11 @@ export class ExpensesComponent implements OnInit, OnDestroy{
   filteredYear  : string = '';
   showform : boolean = false;
 
+  constructor(private dataService : DataService){}
+
   ngOnInit(): void {
-    this.expenses = EXPENSE_DATA;
+    // this.expenses = EXPENSE_DATA;
+    this.expenses = this.dataService.getExpenseData()
   }
 
   onCancelForm(){
