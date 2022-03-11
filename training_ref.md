@@ -216,3 +216,38 @@ fruits.push("kiwi")                         // option 1
 
 // Pure Change
 fruits = ["apple", "banana", "kiwi"]        // option 2
+
+
+# Forms
+    - Template driven
+    - Model Driven / Reactive Forms
+# Services - keep the app business logic
+# Observables
+# Remote Server call / HTTP Call
+
+
+
+# Angular Form - Form and Form Controls - States / Classes
+- ngValid | ngInvalid
+- ngPristine | ngDirty
+- ngTouched | ngUntouched
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Single Page App
+# Modules
+# Deployment

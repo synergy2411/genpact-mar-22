@@ -1,0 +1,61 @@
+<div class="row">
+  <div class="col-6 offset-3">
+    <div class="card">
+      <div class="card-body">
+        <p class="display-4 text-center">Login Form</p>
+        <form [formGroup]="loginForm">
+          <!-- Username -->
+          <div class="form-group">
+            <label for="username">Username : </label>
+            <input
+              type="text"
+              name="username"
+              class="form-control"
+              [formControl]="uname"
+            />
+            <div *ngIf="uname.invalid && uname.dirty">
+              <p class="alert alert-danger">
+                * Some problem with Username field.
+              </p>
+              <div *ngIf="uname.hasError('required')">
+                <p class="alert alert-danger">- Username is mandatory field</p>
+              </div>
+              <div *ngIf="uname.hasError('email')">
+                <p class="alert alert-danger">
+                  - Username must have proper email format
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Password -->
+          <div class="form-group">
+            <label for="password">Password :</label>
+            <input
+              type="password"
+              name="password"
+              class="form-control"
+              [formControl]="pwd"
+            />
+          </div>
+          <!-- buttons -->
+          <div class="form-group">
+            <div class="row">
+              <div class="col-6">
+                <button
+                  class="btn btn-primary btn-block"
+                  (click)="onSubmit()"
+                  [disabled]="!loginForm.valid"
+                >
+                  Submit
+                </button>
+              </div>
+              <div class="col-6">
+                <button class="btn btn-warning btn-block">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

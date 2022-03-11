@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ExpensesComponent } from './components/expenses/expenses.component';
@@ -11,6 +11,7 @@ import { PipeDemoComponent } from './components/pipe-demo/pipe-demo.component';
 import { CountryCodePipe } from './pipes/country-code.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
 import { AddNewComponent } from './components/expenses/add-new/add-new.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [     // Components, Directives, Pipes
@@ -22,11 +23,13 @@ import { AddNewComponent } from './components/expenses/add-new/add-new.component
     PipeDemoComponent,
     CountryCodePipe,
     FilterPipe,
-    AddNewComponent
+    AddNewComponent,
+    LoginComponent
   ],
   imports: [          // Import the Angular Module - Built-in / Custom
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],      // to register the Services
   bootstrap: [AppComponent]
