@@ -9,7 +9,8 @@ import { IExpense } from 'src/app/model/expense.model';
 })
 export class AddNewComponent implements OnInit {
 
-  @Output() addExpenseEvent = new EventEmitter<IExpense>()
+  @Output() addExpenseEvent = new EventEmitter<IExpense>();
+  @Output() cancelEvent = new EventEmitter();
 
   constructor() { }
 
@@ -25,6 +26,10 @@ export class AddNewComponent implements OnInit {
       imagePath : "https://random.imagecdn.app/200/200"
     }
     this.addExpenseEvent.emit(newExpense);
+  }
+
+  onCancel(){
+    this.cancelEvent.emit();
   }
 
 }

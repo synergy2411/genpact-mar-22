@@ -16,6 +16,10 @@ export class ExpensesComponent implements OnInit, OnDestroy{
     this.expenses = EXPENSE_DATA;
   }
 
+  onCancelForm(){
+    this.showform = false;
+  }
+
   onAddNewExpense(newExpense : IExpense){
     this.expenses.push(newExpense);
     this.showform = false;

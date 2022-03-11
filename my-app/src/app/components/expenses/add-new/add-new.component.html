@@ -37,7 +37,8 @@
                   [disabled]="!myForm.valid">Add Expense</button>
               </div>
               <div class="col-6">
-                <button class="btn btn-warning btn-block">Cancel</button>
+                <button class="btn btn-warning btn-block"
+                (click)="onCancel()">Cancel</button>
               </div>
             </div>
           </div>
