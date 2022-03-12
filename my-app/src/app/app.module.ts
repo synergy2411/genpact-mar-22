@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
@@ -20,6 +20,7 @@ import { APP_ROUTES } from './app.routes';
 import { HeaderComponent } from './components/header/header.component';
 import { ExpenseAlertComponent } from './components/expenses/expense-alert/expense-alert.component';
 import { EmployeeModule } from './modules/employee/employee.module';
+import { LoggerInterceptorService } from './services/logger-interceptor.service';
 
 @NgModule({
   declarations: [     // Components, Directives, Pipes
@@ -45,7 +46,14 @@ import { EmployeeModule } from './modules/employee/employee.module';
     RouterModule.forRoot(APP_ROUTES),
     EmployeeModule            // Eagerly loaded
   ],
-  providers: [DataService],      // to register the Services
+  providers: [
+    DataService,
+    {
+      provide : HTTP_INTERCEPTORS,
+      useClass : LoggerInterceptorService,
+      multi : true
+    }
+  ],      // to register the Services
   bootstrap: [AppComponent]
 })
 export class AppModule { }
