@@ -233,7 +233,7 @@ fruits = ["apple", "banana", "kiwi"]        // option 2
 - ngTouched | ngUntouched
 
 
-# Remote Server Call - HttpClientModule -> GET POST PUTCH DELETE
+# Remote Server Call - HttpClientModule -> GET POST PATCH DELETE
 
 # to install JSON SERVER
 - npm i json-server -g
@@ -263,3 +263,25 @@ fruits = ["apple", "banana", "kiwi"]        // option 2
 # Single Page App
 # Modules
 # Deployment
+
+
+# What is SPA?
+- One and Only one HTML Page
+- Multi-page within Single HTML Page
+- Browser does NOT Reload / Refresh
+- Fast
+- Interactive
+- Bootstrapping the app will take time
+    - Eagerly Loaded - 2 Modules
+    - Lazily Loaded - 48 Modules
+
+
+Prevents - XSS, XSRUF / CSRUF / JSONP / XXE - []="" || {{}}
+
+- Components : create the UI | Comp level logic
+- Services : not directly attached to UI
+
+# Routing Terminologies
+- Routes : configure the routes with components
+- RouterModule : supply route configuration to Angular App
+- RouterOutlet : provide space to load component template
