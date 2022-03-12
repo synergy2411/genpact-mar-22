@@ -19,6 +19,7 @@ import { ObservableDemoComponent } from './components/observable-demo/observable
 import { APP_ROUTES } from './app.routes';
 import { HeaderComponent } from './components/header/header.component';
 import { ExpenseAlertComponent } from './components/expenses/expense-alert/expense-alert.component';
+import { EmployeeModule } from './modules/employee/employee.module';
 
 @NgModule({
   declarations: [     // Components, Directives, Pipes
@@ -41,7 +42,8 @@ import { ExpenseAlertComponent } from './components/expenses/expense-alert/expen
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    RouterModule.forRoot(APP_ROUTES)
+    RouterModule.forRoot(APP_ROUTES),
+    EmployeeModule            // Eagerly loaded
   ],
   providers: [DataService],      // to register the Services
   bootstrap: [AppComponent]

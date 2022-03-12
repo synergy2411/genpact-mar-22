@@ -24,6 +24,9 @@ export const APP_ROUTES : Routes = [
     path : "pipe-demo",         // http://localhost:4200/pipe-demo
     component : PipeDemoComponent
   },{
+    path : "admin",
+    loadChildren : () => import("./modules/admin/admin.module").then(m => m.AdminModule)
+  },{
     path : "**",   // does not match above mentioned path http://localhost:4200/notexist
     redirectTo : "login",
     pathMatch : "full"

@@ -285,3 +285,21 @@ Prevents - XSS, XSRUF / CSRUF / JSONP / XXE - []="" || {{}}
 - Routes : configure the routes with components
 - RouterModule : supply route configuration to Angular App
 - RouterOutlet : provide space to load component template
+- Router : navigate the user programmatically
+- ActivatedRoute : access of Current URL
+
+
+M -> Model -> Services / Classes / JSON file / REST API endpoints
+V -> View -> Components
+C -> Controller -> Services
+
+> ng g s services/auth
+
+
+ - Route Parameter : part of URL; dynamic - e0001, e0002 etc
+ - Query Parameter : ?key=value; NOT part of actual URL
+
+
+ # Modules
+ - Eagerly Loaded : become the part of app build; loads at the time of root module
+ - Lazily Loaded : creates their own spearate bundle; loads when the user actually demand them.
