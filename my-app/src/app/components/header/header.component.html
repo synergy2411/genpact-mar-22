@@ -1,17 +1,27 @@
 <div class="container">
   <header>
-    <nav class="navbar float-right">
-      <ul class="nav nav-tabs">
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="['login']">Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="['expenses']">Expenses</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="['pipe-demo']">Pipe Demo</a>
-        </li>
-      </ul>
-    </nav>
+    <div class="row">
+      <div class="col-9">
+        <nav class="navbar float-right">
+          <ul class="nav nav-tabs">
+            <li class="nav-item" *ngIf="!isAuthenticated()">
+              <a class="nav-link" [routerLink]="['login']">Login</a>
+            </li>
+            <li class="nav-item" *ngIf="isAuthenticated()">
+              <a class="nav-link" [routerLink]="['expenses']">Expenses</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['pipe-demo']">Pipe Demo</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="col-3">
+        <button class="btn btn-danger btn-sm btn-block"
+          (click) = "onLogout()"
+          *ngIf="isAuthenticated()">Logout</button>
+      </div>
+    </div>
+
   </header>
 </div>
