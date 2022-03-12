@@ -10,14 +10,20 @@ import { DataService } from 'src/app/services/data.service';
 export class ExpenseAlertComponent implements OnInit {
 
   expenseId! : string;
+  title! : string;
+
   constructor(
     private route : ActivatedRoute,
     private dataService : DataService,
     private router : Router) {
-    this.route.params.subscribe(params => {
-      // console.log(params);      // {expId}
-      this.expenseId = params['id']
-    })
+        this.route.params.subscribe(params => {
+        // console.log(params);      // {expId}
+        this.expenseId = params['id']
+      });
+      this.route.queryParams.subscribe(queryParams =>{
+        this.title = queryParams['title'];
+      })
+
    }
 
    onDelete(){
