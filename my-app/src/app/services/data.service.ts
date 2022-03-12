@@ -13,7 +13,7 @@ export class DataService {
 
   getExpenseData() : Observable<IExpense[]> {
     return this.http.get<IExpense[]>(this.baseUrl)
-      // .subscribe(response => console.log("RESPONSE : ",response))
+    //   .subscribe(response => console.log("RESPONSE : ",response))
     // return EXPENSE_DATA;
   }
 }
