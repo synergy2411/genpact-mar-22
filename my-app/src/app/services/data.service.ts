@@ -22,4 +22,8 @@ export class DataService {
       .subscribe(response => console.log(response));
   }
 
+  onCreateExpense(expense : IExpense){
+    return this.http.post(this.baseUrl, expense)
+  }
+
 }

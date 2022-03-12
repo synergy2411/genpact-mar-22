@@ -16,7 +16,7 @@ export class ExpenseAlertComponent implements OnInit {
     private router : Router) {
     this.route.params.subscribe(params => {
       // console.log(params);      // {expId}
-      this.expenseId = params['expId']
+      this.expenseId = params['id']
     })
    }
 

@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, DoCheck, OnDestroy, OnInit } from '@angular/core';
+import { AfterContentInit, AfterViewInit, Component, DoCheck, OnDestroy, OnInit } from '@angular/core';
 import { IExpense } from 'src/app/model/expense.model';
 // import { EXPENSE_DATA } from 'src/app/data/mocks';
 import { DataService } from 'src/app/services/data.service';
@@ -34,9 +34,13 @@ export class ExpensesComponent implements OnInit, OnDestroy, AfterViewInit{
   }
 
   onAddNewExpense(newExpense : IExpense){
-    console.log(newExpense);
-    this.expenses.push(newExpense);
-    this.showform = false;
+    // this.expenses.push(newExpense);
+    this.dataService.onCreateExpense(newExpense)
+      .subscribe(response => {
+        console.log(response);
+        this.showform = false;
+        this.fetchExpenses();
+      })
   }
 
   deleteExpense(id : string){

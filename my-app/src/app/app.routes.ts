@@ -14,7 +14,7 @@ export const APP_ROUTES : Routes = [
     path : "login",             // http://localhost:4200/login
     component : LoginComponent
   },{
-    path : "expenses/:expId",
+    path : "expenses/:id",
     component : ExpenseAlertComponent
   },{
     path : "expenses",          // http://localhost:4200/expenses
