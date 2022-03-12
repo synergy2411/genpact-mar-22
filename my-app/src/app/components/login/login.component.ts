@@ -37,6 +37,7 @@ export class LoginComponent implements OnInit {
       this.loginForm.value.username,
       this.loginForm.value.password
       ).then(response =>{
+        debugger;
         this.router.navigate(['/expenses'])
         console.log("RESPONSE : ", response)
       })

@@ -303,3 +303,24 @@ C -> Controller -> Services
  # Modules
  - Eagerly Loaded : become the part of app build; loads at the time of root module
  - Lazily Loaded : creates their own spearate bundle; loads when the user actually demand them.
+
+
+# Production build
+
+> ng build -> HTML CSS JavaScript
+ /dist/proj-name --> static assets
+
+ -> AoT Compiler : app size may be reduced by 40%
+ -> bootstraps the app quickly
+
+
+ -> http-server --> npm i http-server -g
+ -> cd dist/my-app
+ -> http-server
+
+
+
+
+ # Interceptors : to intercept outgoing requests and incoming responses.
+
+ SYNERGY2411@OUTLOOK.COM
