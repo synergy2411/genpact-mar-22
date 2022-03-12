@@ -324,3 +324,5 @@ C -> Controller -> Services
  # Interceptors : to intercept outgoing requests and incoming responses.
 
  SYNERGY2411@OUTLOOK.COM
+
+ https://angular-training-guide.rangle.io/
