@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { AfterViewInit, Component, DoCheck, OnDestroy, OnInit } from '@angular/core';
 import { IExpense } from 'src/app/model/expense.model';
 // import { EXPENSE_DATA } from 'src/app/data/mocks';
 import { DataService } from 'src/app/services/data.service';
@@ -8,7 +8,7 @@ import { DataService } from 'src/app/services/data.service';
   templateUrl: './expenses.component.html',
   styleUrls: ['./expenses.component.css']
 })
-export class ExpensesComponent implements OnInit, OnDestroy{
+export class ExpensesComponent implements OnInit, OnDestroy, AfterViewInit{
   expenses! : IExpense[];
   filteredYear  : string = '';
   showform : boolean = false;
@@ -17,6 +17,14 @@ export class ExpensesComponent implements OnInit, OnDestroy{
 
   ngOnInit(): void {
     // this.expenses = EXPENSE_DATA;
+    this.fetchExpenses()
+  }
+
+  ngAfterViewInit(): void {
+    this.fetchExpenses();
+  }
+
+  private fetchExpenses(){
     this.dataService.getExpenseData()
       .subscribe((response : IExpense[]) => this.expenses = response)
   }

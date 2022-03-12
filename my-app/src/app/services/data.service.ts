@@ -16,4 +16,10 @@ export class DataService {
     //   .subscribe(response => console.log("RESPONSE : ",response))
     // return EXPENSE_DATA;
   }
+
+  onDeleteExpense(id : string){
+    this.http.delete(`${this.baseUrl}/${id}`)
+      .subscribe(response => console.log(response));
+  }
+
 }

@@ -1,0 +1,19 @@
+<div class="backdrop">
+  <div class="alert-box">
+    <div class="card">
+      <div class="card-body">
+        <p class="lead text-center">Are you sure to delete this item - {{expenseId}} ?</p>
+        <div class="row">
+          <div class="col-6">
+            <button class="btn btn-block btn-sm btn-danger"
+              (click)="onDelete()">Yes, Please</button>
+          </div>
+          <div class="col-6">
+            <button class="btn btn-block btn-warning btn-sm"
+            (click)="onCancel()">No</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -18,6 +18,7 @@ import { DataService } from './services/data.service';
 import { ObservableDemoComponent } from './components/observable-demo/observable-demo.component';
 import { APP_ROUTES } from './app.routes';
 import { HeaderComponent } from './components/header/header.component';
+import { ExpenseAlertComponent } from './components/expenses/expense-alert/expense-alert.component';
 
 @NgModule({
   declarations: [     // Components, Directives, Pipes
@@ -32,7 +33,8 @@ import { HeaderComponent } from './components/header/header.component';
     AddNewComponent,
     LoginComponent,
     ObservableDemoComponent,
-    HeaderComponent
+    HeaderComponent,
+    ExpenseAlertComponent
   ],
   imports: [          // Import the Angular Module - Built-in / Custom
     BrowserModule,

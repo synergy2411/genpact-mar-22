@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { ExpenseAlertComponent } from './components/expenses/expense-alert/expense-alert.component';
 import { ExpensesComponent } from './components/expenses/expenses.component';
 import { LoginComponent } from './components/login/login.component';
 import { PipeDemoComponent } from './components/pipe-demo/pipe-demo.component';
@@ -12,6 +13,9 @@ export const APP_ROUTES : Routes = [
   },{
     path : "login",             // http://localhost:4200/login
     component : LoginComponent
+  },{
+    path : "expenses/:expId",
+    component : ExpenseAlertComponent
   },{
     path : "expenses",          // http://localhost:4200/expenses
     component : ExpensesComponent,

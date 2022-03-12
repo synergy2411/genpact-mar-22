@@ -1,4 +1,5 @@
 import { Component, Input, EventEmitter, Output, AfterViewInit, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { IExpense } from 'src/app/model/expense.model';
 
 @Component({
@@ -25,8 +26,11 @@ export class ExpenseComponent implements OnInit {
     this.dynamicClasses['my-border'] = this.isEven
   }
 
+  constructor(private router : Router){}
+
   onDelete(){
-    this.deleteEvent.emit(this.expense.id)
+    // this.deleteEvent.emit(this.expense.id)
+    this.router.navigate([`/expenses/${this.expense.id}`])
   }
 
 }
